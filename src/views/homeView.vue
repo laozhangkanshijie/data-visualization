@@ -49,6 +49,7 @@ export default {
   },
   mounted() {
     screenData().then((data) => {
+      console.log(data)
       this.reportData = {
         salesToday: 12124,
         salesGrowthLastDay: 99,
@@ -86,11 +87,106 @@ export default {
         userTodayNumber: 250,
 
         userGrowthLastDay: 8.73,
-        userGrowthLastMonth: 35.91
+        userGrowthLastMonth: 35.91,
+        orderRank: [
+          {
+            no: 1,
+            name: '麦当劳',
+            money: 323234
+          },
+          {
+            no: 2,
+            name: '麦当劳',
+            money: 323234
+          },
+          {
+            no: 3,
+            name: '麦当劳',
+            money: 323234
+          },
+          {
+            no: 4,
+            name: '麦当劳',
+            money: 323234
+          },
+          {
+            no: 5,
+            name: '麦当劳',
+            money: 323234
+          }
+        ],
+        userRank: [
+          {
+            no: 1,
+            name: '麦当劳a',
+            money: 323234
+          },
+          {
+            no: 2,
+            name: '麦当劳b',
+            money: 323234
+          },
+          {
+            no: 3,
+            name: '麦当劳c',
+            money: 323234
+          },
+          {
+            no: 4,
+            name: '麦当劳',
+            money: 323234
+          },
+          {
+            no: 5,
+            name: '麦当劳',
+            money: 323234
+          }
+        ],
+        orderFullYear: [
+          200, 250, 300, 350, 300, 250, 200, 250, 300, 350, 300, 250
+        ],
+        userFullYear: [
+          350, 300, 250, 200, 250, 300, 350, 300, 250, 200, 250, 300
+        ],
+        orderFullYearAxis: [
+          '1月',
+          '2月',
+          '3月',
+          '4月',
+          '5月',
+          '6月',
+          '7月',
+          '8月',
+          '9月',
+          '10月',
+          '11月',
+          '12月'
+        ],
+        userFullYearAxis: [
+          '1月',
+          '2月',
+          '3月',
+          '4月',
+          '5月',
+          '6月',
+          '7月',
+          '8月',
+          '9月',
+          '10月',
+          '11月',
+          '12月'
+        ]
       }
     })
     wordcloud().then((data) => {
-      this.wordCloud = data
+      console.log(data)
+      this.wordCloud = [
+        {
+          word: 'aaa',
+          count: 2,
+          user: 'bbb'
+        }
+      ]
     })
     mapScatter().then((data) => {
       this.mapData = data
